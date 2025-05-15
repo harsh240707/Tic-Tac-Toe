@@ -17,7 +17,7 @@ function checkWinner() {
     let [a, b, c] = combo;
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       gameActive = false;
-      statusText.textContent = Player ${board[a]} wins!;
+      statusText.textContent = "Player ${board[a]} wins!";
       return;
     }
   }
@@ -40,7 +40,7 @@ function cellClicked(e) {
 
   if (gameActive) {
     currentPlayer = currentPlayer === "X" ? "O" : "X";
-    statusText.textContent = Player ${currentPlayer}'s turn;
+    statusText.textContent = "Player ${currentPlayer}'s turn";
   }
 }
 
